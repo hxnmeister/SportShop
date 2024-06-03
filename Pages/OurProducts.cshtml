@@ -1,0 +1,9 @@
+﻿@page "/products"
+@model SportShop.Pages.OurProductsModel
+@{
+    ViewData["Title"] = "Products";
+}
+
+<div class="container">
+   @Html.Partial("_ProductsTablePartial", Model.Products)
+</div>

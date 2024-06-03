@@ -1,0 +1,10 @@
+﻿@page
+@namespace SportShop.Models
+@model SportShop.Pages.SearchProductModel
+@{
+    ViewData["Title"] = "Searching";
+}
+
+<div class="container">
+    @Html.Partial("_ProductsTablePartial", Model.Products)
+</div>

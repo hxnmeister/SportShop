@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"]</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container body-content">
+            <header>
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Navigation Panel</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-page="/Index">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-page="/About">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-page="/Contacts">Contacts</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-page="/OurProducts">Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-page="/Video">Video</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-page="/PhotoGallery">Photo Gallery</a>
+                                </li>
+                            </ul>
+
+                        <form class="d-flex ms-auto" asp-page="/SearchProduct" asp-page-handler="Search" method="post" role="search">
+                            <input class="form-control me-2" name="searchingParam" type="search" placeholder="Search by any criteria..." aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            @RenderBody()
+
+            <hr />
+
+            <footer>
+                <p>&copy; 2024 - SportShop</p>
+            </footer>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
